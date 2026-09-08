@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# Environment & Secrets
+.env
+.env*.local
+
+# Next.js build output
+.next/
+out/
+
+# System
+.DS_Store
+*.pem

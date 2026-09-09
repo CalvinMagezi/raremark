@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Mail, MapPin, Phone, MessageSquare, Send } from "lucide-react";
+import { Mail, MapPin, MessageSquare, Send } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

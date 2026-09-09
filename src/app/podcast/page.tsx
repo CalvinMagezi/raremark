@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Play, Volume2, Radio, Headphones, Share2, Calendar, Clock } from "lucide-react";

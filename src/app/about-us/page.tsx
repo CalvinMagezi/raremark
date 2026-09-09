@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Heart, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -77,25 +76,48 @@ export default function AboutUsPage() {
       <main className="flex-1">
         {/* ================= INTRO HERO ================= */}
         <section className="pt-16 pb-20 md:pt-24 md:pb-28 bg-white border-b border-neutral-100">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-6xl lg:text-[64px] font-serif font-bold text-[#161A32] leading-tight mb-8">
-              The Raremark Foundation
-            </h1>
-            <p className="text-lg sm:text-xl text-neutral-700 leading-relaxed font-normal text-justify sm:text-center">
-              A non-profit organization dedicated to improving the lives of people living with (Warriors) or affected by Sickle Cell Disease. Founded in 2020, it has always been guided by one core aim: creating a safe space where Warriors and their families can exchange information, support one another, and raise awareness about the condition. Today, through targeted programs and support from partners, Raremark Foundation has evolved into a structured organization driving awareness, care, and advocacy for individuals and families affected by SCD. Our community is made up of Warriors, caregivers, healthcare professionals, and advocates, all united by a shared passion to create a better future and work toward a generation free from Sickle Cell Disease.
-            </p>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              {/* Left Column: Heading and Story */}
+              <div className="lg:col-span-7 space-y-6">
+                <h1 className="text-4xl sm:text-6xl lg:text-[62px] font-black text-[#161A32] tracking-tight leading-[1.12]">
+                  The Raremark Foundat<span className="text-[#DC143C]">i</span>on
+                </h1>
+                <div className="space-y-5 text-base sm:text-lg text-neutral-700 leading-relaxed font-normal">
+                  <p>
+                    A non-profit organization dedicated to improving the lives of people living with (Warriors) or affected by Sickle Cell Disease. Founded in 2020, it has always been guided by one core aim: creating a safe space where Warriors and their families can exchange information, support one another, and raise awareness about the condition.
+                  </p>
+                  <p>
+                    Today, through targeted programs and support from partners, Raremark Foundation has evolved into a structured organization driving awareness, care, and advocacy for individuals and families affected by SCD.
+                  </p>
+                  <p>
+                    Our community is made up of Warriors, caregivers, healthcare professionals, and advocates, all united by a shared passion to create a better future and work toward a generation free from Sickle Cell Disease.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Column: Large Sickle Cell Crescent Graphic */}
+              <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[440px] aspect-square">
+                  <Image
+                    src="/images/figma/sickle-intro.png"
+                    alt="Raremark Foundation Sickle Cell crescent emblem"
+                    fill
+                    priority
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* ================= OUR ORIGINS ================= */}
-        <section className="py-20 lg:py-28 bg-[#FCFCFD]">
+        <section className="py-20 lg:py-28 bg-[#F8F9FD]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               {/* Text Side */}
               <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-black uppercase tracking-[0.25em] text-[#DC143C]">
-                  Our Story
-                </span>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-[#161A32]">
                   Our Origins
                 </h2>
@@ -128,27 +150,35 @@ export default function AboutUsPage() {
         </section>
 
         {/* ================= JOIN OUR MISSION CARD ================= */}
-        <section className="py-12 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-br from-[#161A32] to-[#07263A] rounded-3xl p-8 sm:p-14 text-white shadow-xl text-center space-y-6">
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-red-400">
-                Purpose & Vision
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-black text-white">
-                Join Our Mission
-              </h2>
-              <p className="text-base sm:text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed">
-                We exist to improve the quality of life for Warriors by building an informed and supportive community. Through education, advocacy, and access to care, we empower Warriors and their families with the knowledge, resources, and support they need to take control of their health and live better lives, strengthening the fight against SCD together.
-              </p>
-              <div className="pt-2">
-                <Link
-                  href="/donate"
-                  className="inline-flex items-center gap-2 bg-[#DC143C] hover:bg-[#B1002C] text-white font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-full shadow-md hover:shadow-lg transition-all active:scale-95"
-                >
-                  <Heart className="w-4 h-4 fill-white" />
-                  SUPPORT US
-                </Link>
+        <section className="py-20 lg:py-24 bg-white text-center">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Centered Sickle Crescent Moon */}
+            <div className="flex justify-center mb-6">
+              <div className="relative w-16 h-16 sm:w-20 sm:h-20">
+                <Image
+                  src="/images/figma/sickle-crescent.png"
+                  alt="Sickle cell crescent emblem"
+                  fill
+                  className="object-contain"
+                />
               </div>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#161A32] tracking-tight mb-6">
+              Join Our Mission
+            </h2>
+
+            <p className="text-base sm:text-lg text-neutral-700 max-w-3xl mx-auto leading-relaxed mb-8 font-normal">
+              We exist to improve the quality of life for Warriors by building an informed and supportive community. Through education, advocacy, and access to care, we empower Warriors and their families with the knowledge, resources, and support they need to take control of their health and live better lives, strengthening the fight against SCD together.
+            </p>
+
+            <div>
+              <Link
+                href="/donate"
+                className="inline-flex items-center justify-center bg-[#DC143C] hover:bg-[#B1002C] text-white font-black text-xs uppercase tracking-widest px-8 py-4 rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95"
+              >
+                SUPPORT US
+              </Link>
             </div>
           </div>
         </section>

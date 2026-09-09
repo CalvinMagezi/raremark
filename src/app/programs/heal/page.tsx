@@ -286,6 +286,30 @@ export default function HealProgramPage() {
             </div>
           </div>
         </section>
+
+        {/* ================= CTA BANNER ================= */}
+        <section className="bg-black py-20 lg:py-24 text-center text-white relative">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <p className="text-xs font-black tracking-[0.25em] text-neutral-400 uppercase">
+              RAREMARK FOUNDATION
+            </p>
+            <h2 className="text-2xl sm:text-4xl md:text-[40px] font-bold text-white leading-tight max-w-3xl mx-auto">
+              “A non-profit organization dedicated to improving the lives of people living with or affected by Sickle Cell Disease.”
+            </h2>
+            <div className="w-16 h-0.5 bg-[#DC143C] mx-auto" />
+            <p className="text-sm sm:text-base text-neutral-400 max-w-2xl mx-auto font-normal leading-relaxed">
+              Your contribution directly supports medical supplies, health worker training modules, and emergency care response systems where they are needed most.
+            </p>
+            <div className="pt-2">
+              <Link
+                href="/donate"
+                className="inline-flex items-center justify-center bg-[#DC143C] hover:bg-[#B1002C] text-white font-bold text-xs uppercase tracking-widest px-8 py-3.5 rounded-lg shadow-md transition-all active:scale-95"
+              >
+                Support Us
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />

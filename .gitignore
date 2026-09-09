@@ -14,3 +14,4 @@ out/
 # System
 .DS_Store
 *.pem
+.vercel

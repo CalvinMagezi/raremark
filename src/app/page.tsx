@@ -3,7 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import TopBanner from "@/components/TopBanner";
 import Footer from "@/components/Footer";
-import { ArrowRight, Play, Volume2, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 export default function HomePage() {
   const partners = [
@@ -62,6 +62,34 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ================= DARK BRAND STATEMENT BANNER ================= */}
+        <section className="bg-[#191A1D] text-white py-14 sm:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+              <div className="md:col-span-5">
+                <h2 className="text-3xl sm:text-5xl font-black text-white leading-[1.15] tracking-tight">
+                  The <br />
+                  Raremark <br />
+                  Foundat<span className="text-[#DC143C]">i</span>on
+                </h2>
+              </div>
+              <div className="md:col-span-7 space-y-4 md:pl-8">
+                <p className="text-xl sm:text-2xl md:text-[28px] font-medium text-neutral-100 leading-snug">
+                  Raremark Foundation provides trusted, science-backed information and real-life support on sickle cell disease.
+                </p>
+                <div>
+                  <Link
+                    href="/about-us"
+                    className="inline-block text-sm sm:text-base font-bold text-white underline underline-offset-4 hover:text-[#DC143C] transition-colors"
+                  >
+                    Learn more
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ================= PARTNERS TRUST STRIP ================= */}
         <section className="py-12 bg-white border-y border-neutral-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,7 +115,7 @@ export default function HomePage() {
         {/* ================= OUR KEY PROGRAMS & STATS ================= */}
         <section className="py-20 lg:py-28 bg-[#FCFCFD]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
               <div>
                 <span className="text-xs font-black uppercase tracking-[0.25em] text-[#DC143C]">
                   Measurable Impact
@@ -102,6 +130,18 @@ export default function HomePage() {
               >
                 View HEAL Program <ArrowRight className="w-4 h-4" />
               </Link>
+            </div>
+
+            {/* 3 Core Programs Cards (from authentic Figma design) */}
+            <div className="mb-16 rounded-2xl overflow-hidden border border-neutral-200/80 shadow-md bg-white">
+              <Image
+                src="/images/figma/impact-summary.png"
+                alt="Raremark Foundation Programs: Know Your Type, Hope For Warriors Fund, HEAL"
+                width={2284}
+                height={806}
+                priority
+                className="w-full h-auto object-cover"
+              />
             </div>
 
             {/* Impact Metric Cards Grid */}
@@ -187,70 +227,6 @@ export default function HomePage() {
                   <span className="text-xs font-bold uppercase tracking-wider text-neutral-400">
                     Grassroots Community Outreach
                   </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Impact Banner Graphic */}
-            <div className="mt-12 rounded-2xl overflow-hidden border border-neutral-200 shadow-lg bg-neutral-900">
-              <Image
-                src="/images/figma/impact-summary.png"
-                alt="Raremark Foundation programmatic overview"
-                width={2284}
-                height={806}
-                priority
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* ================= SICK CONVERSATIONS PODCAST SECTION ================= */}
-        <section className="py-16 lg:py-20 bg-[#F5F7FA]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-neutral-200/80 shadow-xl overflow-hidden relative">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-                {/* Podcast Cover */}
-                <div className="lg:col-span-5 relative">
-                  <div className="relative aspect-square max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                    <Image
-                      src="/images/figma/podcast-cover.png"
-                      alt="Sick Conversations Podcast"
-                      fill
-                      priority
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Podcast Details */}
-                <div className="lg:col-span-7 space-y-6">
-                  <div className="inline-flex items-center gap-2 bg-red-50 text-[#B1002C] px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider">
-                    <Volume2 className="w-4 h-4 text-[#DC143C]" />
-                    Featured Podcast
-                  </div>
-
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#161A32] leading-tight">
-                    Sick Conversations Podcast: Real stories. Honest conversations. Unfiltered experiences.
-                  </h2>
-
-                  <p className="text-base sm:text-lg text-neutral-600 font-normal leading-relaxed">
-                    Join us as we explore the journeys of those living with rare diseases, the challenges they face, and the breakthroughs that bring hope. Because every story matters. 💙
-                  </p>
-
-                  <p className="text-xs font-bold text-neutral-400 tracking-wider">
-                    #SickConversations #RaremarkFoundation
-                  </p>
-
-                  <div className="pt-2 flex flex-wrap gap-4">
-                    <Link
-                      href="/podcast"
-                      className="inline-flex items-center gap-3 bg-[#161A32] hover:bg-[#07263A] text-white text-xs sm:text-sm font-black uppercase tracking-widest px-8 py-4 rounded-full shadow-md transition-all active:scale-95"
-                    >
-                      <Play className="w-4 h-4 fill-white" />
-                      Watch our latest episode now
-                    </Link>
-                  </div>
                 </div>
               </div>
             </div>
@@ -374,6 +350,61 @@ export default function HomePage() {
                   </div>
                 </div>
               </article>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= SICK CONVERSATIONS PODCAST SECTION ================= */}
+        <section className="py-16 lg:py-24 bg-neutral-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-[#0B0C0E] rounded-3xl p-8 sm:p-12 lg:p-14 text-white shadow-2xl border border-neutral-800">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                {/* Podcast Cover */}
+                <div className="lg:col-span-5 flex justify-center">
+                  <div className="relative w-full max-w-[360px] aspect-square rounded-3xl overflow-hidden bg-[#FCEEEA] p-6 flex items-center justify-center shadow-inner">
+                    <Image
+                      src="/images/figma/podcast-cover.png"
+                      alt="Sick Conversations Podcast"
+                      width={320}
+                      height={320}
+                      priority
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Waveform Graphic */}
+                <div className="hidden lg:flex lg:col-span-2 justify-center items-center">
+                  <div className="relative w-24 h-24">
+                    <Image
+                      src="/images/figma/podcast-waveform.svg"
+                      alt="Audio waveform"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Podcast Details */}
+                <div className="lg:col-span-5 space-y-6">
+                  <h3 className="text-xl sm:text-2xl font-black text-white leading-snug tracking-tight uppercase">
+                    S<span className="text-[#DC143C]">I</span>CK CONVERSATIONS PODCAST: REAL STORIES. HONEST CONVERSATIONS. UNFILTERED EXPERIENCES.
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-neutral-300 font-normal uppercase leading-relaxed tracking-wider">
+                    JOIN US AS WE EXPLORE THE JOURNEYS OF THOSE LIVING WITH RARE DISEASES, THE CHALLENGES THEY FACE, AND THE BREAKTHROUGHS THAT BRING HOPE. BECAUSE EVERY STORY MATTERS. 💙 #SICKCONVERSATIONS #RAREMARKFOUNDATION
+                  </p>
+
+                  <div className="pt-2">
+                    <Link
+                      href="/podcast"
+                      className="inline-block text-xs sm:text-sm font-black tracking-widest text-white uppercase underline underline-offset-8 hover:text-[#DC143C] transition-colors"
+                    >
+                      WATCH OUR LATEST EPISODE NOW
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
